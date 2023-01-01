@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600&display=swap');
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    max-width: 1400px;
+    height: 100vh;
+}
+img
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -999;
+}
+.hidden
+{
+    display: none;
+}
+.title
+{
+    font-size: 22px;
+    width: fit-content;
+    background-color: #00000063;
+    color: #98e741;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+button
+{
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+.row-users,
+.row-posts
+{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container
+{
+    /* position: fixed; */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .row
+{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    background-color: #00a0fd46;
+}
+.container .users
+{
+    flex: 0 1 35%;
+    max-width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    border-right: 1px solid #00a0fd;
+    border-left: 1px solid #00a0fd;
+}
+.container .users .content
+{
+    cursor: pointer;
+}
+.container .users .content,
+.container .posts .content
+{
+    width: 100%;
+    margin: 8px 0;
+    background-color: #a52a2a26;
+    border-radius: 40px;
+    padding: 5px 20px;
+    box-shadow: 1px 0px 10px 0 black;
+    border: 1px solid transparent;
+}
+.container .users .content.active
+{
+    background-color: #00a0fd;
+    border: 1px solid #fd0000;
+}
+.container .posts
+{
+    flex: 0 0 65%;
+    max-width: 65%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #00a0fd;
+}
+.container .posts .content
+{
+    border-radius: 10px;
+    background-color: #2a78a5c7;
+    display: flex;
+}
+.container .posts .content .text
+{
+    width: 95%;
+}
+.container .posts .content .text .click
+{
+    color: #98e741;
+    cursor: pointer;
+}
+.container .posts .content .num
+{
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .posts .content .num p
+{
+    color: #fff;
+}
+.container .content h1
+{
+    font-size: 20px;
+    color: #00a0fd;
+    font-weight: 900;
+    text-shadow: 3px 3px 4px #000000;
+    word-spacing: 5px;
+}
+.container .posts .content h1
+{
+    color: #fd0000;
+}
+.container .content p
+{
+    font-size: 16px;
+    color: #010101;
+    font-weight: 900;
+    text-shadow: 3px 3px 4px #0a584d;
+    word-spacing: 5px;
+}
+.container .users .content:hover
+{
+    background-color: #00a0fd;
+}
+.container .row-users > .content.active > h1,
+.container .row-users > .content:hover > h1
+{
+    /* background-color: #00a0fd; */
+    color: #fff;
+}
+
+@media (max-width: 1250px)
+{
+    .container .row
+    {
+        width: 95%;
+    }
+}
+@media (max-width: 1050px)
+{
+    .container .row
+    {
+        width: 100%;
+    }
+}
+@media (max-width: 945px)
+{
+    .container
+    {
+        height: fit-content;
+    }
+    .container .row
+    {
+        flex-direction: column;
+    }
+    .row-users
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 15px;
+    }
+    .container .users,
+    .container .posts
+    {
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px)
+{
+    .row-users, 
+    .row-posts
+    {
+        width: 95%;
+    }
+    .container .content h1
+    {
+        font-size: 16px;
+    }
+}
+@media (max-width: 555px)
+{
+    .row-users
+    {
+        grid-template-columns: 1fr;
+    }
+    .container .users .content
+    {
+        text-align: center;
+    }
+}
